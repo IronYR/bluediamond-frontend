@@ -1,0 +1,11 @@
+:root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0E1321;
+  color: white;
+}
+a.active{
+  color: rgb(59 130 246);
+  font-size:large;
+}
