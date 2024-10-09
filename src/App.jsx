@@ -17,7 +17,6 @@ function App() {
         <Route path="/industries" element={<IndustriesPage />} />
         <Route path="/services" element={<ServicesPage />} />        
         <Route path="/blog/:slug" element={<BlogPostPage />} /> {/* Dynamic route */}
-
       </Routes>
     </Router>
   );

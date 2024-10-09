@@ -26,7 +26,7 @@ export default function Hero() {
                 </button> */}
               </div>
             </div>
-            <img src="../../public/hero-image.jpg" className='rounded-3xl'/>
+            <img src="/hero-image.jpg" className='rounded-3xl'/>
           </div>
         </div>
       </section>
