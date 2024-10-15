@@ -1,73 +1,82 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import React from "react";
 
-const BlogCard = ({ title, image, description, category, slug }) => {
+const BlogCard = ({ post }) => {
   return (
     <a
-      href={`/blog/${slug}`}
-      className="group flex flex-col justify-between rounded-xl border border-border bg-accent p-6"
+      href={`/blog/${post.slug}`}
+      className="flex flex-col overflow-clip rounded-xl border border-border cursor-pointer"
     >
       <div>
-        <div className="flex aspect-[3/2] text-clip rounded-xl">
-          <div className="flex-1">
-            <div className="relative size-full origin-bottom transition duration-300 group-hover:scale-105">
-              <img
-                src={image}
-                alt={title}
-                className="size-full object-cover object-center"
-              />
-            </div>
-          </div>
-        </div>
+        <img
+          src={post.image}
+          alt={post.title}
+          className="aspect-[16/9] h-full w-full object-cover object-center"
+        />
       </div>
-      <div className="mb-2 line-clamp-3 break-words pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl">
-        {title}
-      </div>
-      <div className="mb-8 line-clamp-2 text-sm text-zinc-600 md:mb-12 md:text-base lg:mb-9">
-        {description}
-      </div>
-      <div>
-        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-zinc-200 text-zinc-800 hover:bg-black/80">
-          {category}
-        </div>
+      <div className="px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12">
+        <h3 className="mb-3 text-lg font-semibold md:mb-4 md:text-xl lg:mb-6">
+          {post.title}
+        </h3>
+        <p className="mb-3 text-zinc-600 md:mb-4 lg:mb-6">{post.description}</p>
+        <p className="flex items-center hover:underline">
+          Read more
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-arrow-right ml-2 size-4"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </p>
       </div>
     </a>
   );
 };
 
+import { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 const BlogPage = () => {
-  const [blogs, setBlogs] = useState([
+  const [posts, setPosts] = useState([
     {
       id: 1,
       title: "Test",
-      image: "/public/hero-image.jpg",
+      image: "/hero-image.jpg",
       description: "Hello",
       category: "Test",
     },
     {
       id: 2,
       title: "Next test",
-      image: "/public/hero-image.jpg",
+      image: "/hero-image.jpg",
       description: "Hello",
       category: "Test",
     },
     {
       id: 3,
       title: "Next test",
-      image: "/public/hero-image.jpg",
+      image: "/hero-image.jpg",
       description: "Hello",
       category: "Test",
     },
   ]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Fetch blogs from the server
     fetch("http://127.0.0.1:8000/api/blogposts/")
       .then((response) => response.json())
       .then((data) => {
-        setBlogs(data);
+        setPosts(data);
         setLoading(false);
         console.log(data);
       })
@@ -78,34 +87,32 @@ const BlogPage = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <div>Loading...</div>;
   }
 
   return (
     <div>
-      <Navbar />
-      <section className="py-32">
-        <div className="container">
-          <div className="mb-8 md:mb-10 lg:mb-12">
-            <h2 className="mb-6 w-full text-4xl font-medium md:mb-14 md:text-5xl lg:mb-16 lg:text-6xl">
+        <Navbar/>
+      <section className="py-32 container" style={{width:"100vw"}}>
+        <div className="container flex flex-col items-center gap-16 lg:px-16">
+          <div className="text-center">
+            <h2 className="mb-3 text-pretty text-3xl font-semibold md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
               Our Featured Insights...
             </h2>
+            <p className="mb-8 text-zinc-700 md:text-base lg:max-w-2xl lg:text-lg">
+              Explore the latest articles and insights from our blog.
+            </p>
+
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:gap-6 2xl:grid-cols-3">
-            {blogs.map((blog) => (
-              <BlogCard
-                key={blog.id}
-                title={blog.title}
-                slug={blog.slug}
-                image={blog.image}
-                description={blog.description}
-                category={blog.category}
-              />
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+            {posts.map((post) => (
+              <BlogCard key={post.id} post={post} />
             ))}
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer/>
     </div>
   );
 };
