@@ -73,7 +73,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     // Fetch blogs from the server
-    fetch("/api/api/blogposts/")
+    fetch("/api/blogposts/")
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);

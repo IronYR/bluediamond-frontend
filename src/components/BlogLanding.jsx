@@ -27,7 +27,7 @@ export default function BlogLanding() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/api/blogposts/")
+    fetch("/api/blogposts/")
       .then((response) => response.json())
       .then((data) => {
         setBlogs(data);
