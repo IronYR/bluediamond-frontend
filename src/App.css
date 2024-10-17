@@ -9,3 +9,6 @@ a.active{
   color: rgb(59 130 246);
   font-size:large;
 }
+html, body {
+  overflow-x: hidden;
+}

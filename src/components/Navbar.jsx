@@ -17,7 +17,7 @@ const NavItem = ({text, link}) => {
 };
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const navItems = [["Services", "services"],["Industries", "industries"], ["Featured Insights", "blog"], ["About","about"]]
+  const navItems = [["Services", "services"],["Industries", "industries"], ["Featured Insights", "blog"], ["Services and Industries","ServicesAndIndustry"], ["About","about"]]
   return (
     <section>
       <div className="container">
