@@ -10,7 +10,7 @@ export default function Hero() {
               <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
                 Reinvent your business with AI
               </h1>
-              <p className="mb-8 max-w-xl text-zinc-600 lg:text-xl">
+              <p className="mb-8 max-w-xl text-gray-400 lg:text-xl">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig
                 doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur.
                 Explicabo.

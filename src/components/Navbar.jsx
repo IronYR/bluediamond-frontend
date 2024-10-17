@@ -6,10 +6,9 @@ const NavItem = ({text, link}) => {
       <li className="mt-5 lg:mt-0">
         <NavLink
           to={"/"+link}
-          className="px-2 py-6 text-sm leading-[22px] text-gray-500 hover:text-blue-500 md:px-3 lg:px-6"
+          className="px-2 py-6 text-sm leading-[22px] text-white-500 hover:text-blue-500 md:px-3 lg:px-6"
         >
           {text}
-          {/* <span className="hidden lg:inline"> templates </span> */}
         </NavLink>
       </li>
     </>
@@ -25,7 +24,7 @@ const Navbar = () => {
           <div className="flex flex-row items-center justify-between lg:justify-start">
             <Link
               to="/"
-              className="text-lg font-bold tracking-tighter text-blue-600 transition duration-500 ease-in-out lg:pr-8"
+              className="text-xl font-bold tracking-tighter text-blue-600 transition duration-500 ease-in-out lg:pr-8"
             >
               bluediamond.ai
             </Link>

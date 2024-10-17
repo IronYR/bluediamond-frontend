@@ -17,7 +17,7 @@ const BlogCard = ({ post }) => {
         <h3 className="mb-3 text-lg font-semibold md:mb-4 md:text-xl lg:mb-6">
           {post.title}
         </h3>
-        <p className="mb-3 text-zinc-600 md:mb-4 lg:mb-6">{post.description}</p>
+        <p className="mb-3 text-gray-400 md:mb-4 lg:mb-6">{post.description}</p>
         <p className="flex items-center hover:underline">
           Read more
           <svg
@@ -99,7 +99,7 @@ const BlogPage = () => {
             <h2 className="mb-3 text-pretty text-3xl font-semibold md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
               Our Featured Insights...
             </h2>
-            <p className="mb-8 text-zinc-700 md:text-base lg:max-w-2xl lg:text-lg">
+            <p className="mb-8 text-white md:text-base lg:max-w-2xl lg:text-lg">
               Explore the latest articles and insights from our blog.
             </p>
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const Industries = () => {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900 rounded-xl">
       <div className="container px-6 py-12 mx-auto my-24">
         <div>
           <h1 className="text-white text-3xl md:text-6xl pb-8 text-center">

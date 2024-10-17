@@ -86,7 +86,7 @@ export default function BlogLanding() {
 
                       <a
                         href={"/blog/" + blog.slug}
-                        className="block mt-2 font-medium text-gray-700 hover:underline hover:text-gray-500 dark:text-gray-400"
+                        className="block mt-2 font-medium text-gray-500 hover:underline hover:text-gray-500 dark:text-gray-400"
                       >
                         {blog.title}
                       </a>
