@@ -1,8 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face{
+  font-family: "SourceSans";
+  src:local("SourceSans-Regular"),
+  url('./assets/fonts/SourceSans3-VariableFont_wght.ttf') 
+}
+@font-face {
+  font-family: "Nexa";
+  src: local("Nexa-Heavy"), 
+  url('./assets/fonts/Nexa-Heavy.ttf');
+}
 body{
   overflow-x: hidden;
+  font-family: "SourceSans";
+}
+h1, h2{
+  font-family: "Nexa";
 }
 @keyframes fadeInUp {
   from {
