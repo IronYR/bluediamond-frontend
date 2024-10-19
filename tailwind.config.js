@@ -8,7 +8,9 @@ export default {
     extend: {
       colors:{
         main: "#0E1321",
-        border: "rgba(44, 46, 48, 1)"
+        border: "rgba(44, 46, 48, 1)",
+        earthybrown: "#BC6629",
+        earthyfawn: "#F3D1AD"
       }
     },
   },

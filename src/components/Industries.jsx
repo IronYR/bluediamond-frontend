@@ -2,10 +2,10 @@ import React from "react";
 
 const Industries = () => {
   return (
-    <section className="bg-white dark:bg-gray-900 rounded-xl">
+    <section className="dark:bg-earthybrown rounded-xl">
       <div className="container px-6 py-12 mx-auto my-24">
         <div>
-          <h1 className="text-white text-3xl md:text-6xl pb-8 text-center">
+          <h1 className="text-black text-3xl md:text-6xl pb-8 text-center">
           Tailored AI Solutions for Every Business Need
             {/* <span className="text-blue-500">transformed</span> */}
           </h1>
@@ -26,10 +26,10 @@ const Industries = () => {
                 fill="#4299E1"
               />
             </svg>
-            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+            <h1 className="mt-4 text-xl font-semibold dark:text-black">
               Information Technology
             </h1>
-            <p className="mt-2 text-gray-500 dark:text-gray-400">
+            <p className="mt-2  text-white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim
               fusce tortor, ac sed malesuada blandit. Et mi gravida sem feugiat.
             </p>
@@ -102,10 +102,10 @@ const Industries = () => {
                 </g>
               </g>
             </svg>
-            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-black">
               Chemical
             </h1>
-            <p className="mt-2 text-gray-500 dark:text-gray-400">
+            <p className="mt-2  text-white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim
               fusce tortor, ac sed malesuada blandit. Et mi gravida sem feugiat.
             </p>
@@ -160,10 +160,10 @@ const Industries = () => {
                 </clipPath>
               </defs>
             </svg>
-            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-black">
               Mechanical
             </h1>
-            <p className="mt-2 text-gray-500 dark:text-gray-400">
+            <p className="mt-2  text-white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim
               fusce tortor, ac sed malesuada blandit. Et mi gravida sem feugiat.
             </p>
