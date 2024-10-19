@@ -1,12 +1,12 @@
 import React from "react";
-import ServiceCard from "./ServiceCard"
+import ServiceCard from "./ServiceCard";
 
 // Array of service data for testing
 const services = [
   {
-    title: "Service 1",
+    title: "Trust us for your foundational data needs",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet",
+      "Our dataset creation service provides high-quality, tailored datasets using advanced techniques for accuracy and reliability. We collaborate with your team to deliver actionable datasets that drive insights and innovation.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -25,9 +25,9 @@ const services = [
     ),
   },
   {
-    title: "Service 2",
+    title: "Revolutionize Hiring with Our Intelligent HR Chatbot",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet",
+      "Our HR chatbot transforms hiring with text, voice, and video interviews. It engages candidates and analyzes physical gestures for non-verbal cues. With transparent AI evaluations, it ensures fair, data-driven decisions, enhancing the recruitment experience and empowering HR teams to make informed choices efficiently",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -66,69 +66,69 @@ const services = [
       </svg>
     ),
   },
-  {
-    title: "Service 4",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Service 5",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Service 6",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-        />
-      </svg>
-    ),
-  },
+  // {
+  //   title: "Service 4",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet",
+  //   icon: (
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       class="w-6 h-6"
+  //       fill="none"
+  //       viewBox="0 0 24 24"
+  //       stroke="currentColor"
+  //     >
+  //       <path
+  //         stroke-linecap="round"
+  //         stroke-linejoin="round"
+  //         stroke-width="2"
+  //         d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+  //       />
+  //     </svg>
+  //   ),
+  // },
+  // {
+  //   title: "Service 5",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet",
+  //   icon: (
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       class="w-6 h-6"
+  //       fill="none"
+  //       viewBox="0 0 24 24"
+  //       stroke="currentColor"
+  //     >
+  //       <path
+  //         stroke-linecap="round"
+  //         stroke-linejoin="round"
+  //         stroke-width="2"
+  //         d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+  //       />
+  //     </svg>
+  //   ),
+  // },
+  // {
+  //   title: "Service 6",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet",
+  //   icon: (
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       class="w-6 h-6"
+  //       fill="none"
+  //       viewBox="0 0 24 24"
+  //       stroke="currentColor"
+  //     >
+  //       <path
+  //         stroke-linecap="round"
+  //         stroke-linejoin="round"
+  //         stroke-width="2"
+  //         d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+  //       />
+  //     </svg>
+  //   ),
+  // },
   // Add the rest of the services here with their respective icons
 ];
 

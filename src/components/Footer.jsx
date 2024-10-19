@@ -3,7 +3,7 @@ const Footer = () => {
       <footer>
         <div className="container px-6 py-12 mx-auto">
         <div class="text-center">
-            <h2 class="text-2xl font-semibold text-gray-800 dark:text-white">Let’s get started on something great</h2>
+            <h2 class="text-2xl font-semibold text-gray-800 dark:text-white">Take the Leap into AI-Powered Innovation!</h2>
 
             <p class="max-w-md mx-auto mt-2 text-gray-500 dark:text-gray-400">Book a free consultation with us</p>
 

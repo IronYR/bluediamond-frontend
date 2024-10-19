@@ -6,8 +6,8 @@ const Industries = () => {
       <div className="container px-6 py-12 mx-auto my-24">
         <div>
           <h1 className="text-white text-3xl md:text-6xl pb-8 text-center">
-            Industries we have{" "}
-            <span className="text-blue-500">transformed</span>
+          Tailored AI Solutions for Every Business Need
+            {/* <span className="text-blue-500">transformed</span> */}
           </h1>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
