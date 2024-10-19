@@ -5,8 +5,8 @@ import Footer from "../components/Footer";
 function ServiceCard({ title, description }) {
   return (
     <div className="min-h-[40vh] flex flex-col justify-center rounded-lg p-8 shadow-lg" style={{backgroundColor:"rgba(0, 27, 102, 1)"}}>
-      <h1 className="text-6xl font-semibold mb-6">{title}</h1>
-      <p className="text-gray-400 text-2xl leading-relaxed">{description}</p>
+      <h1 className="text-4xl font-semibold mb-6 lg:text-6xl">{title}</h1>
+      <p className="text-gray-400 text-xl lg:text-2xl leading-relaxed">{description}</p>
     </div>
   );
 }
