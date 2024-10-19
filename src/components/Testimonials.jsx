@@ -5,7 +5,7 @@ export default function Testimonials() {
     <div className="py-24">
       <section class="dark:bg-earthybrown rounded-xl">
         <div class="container px-6 py-10 mx-auto">
-          <h1 class="ttext-3xl md:text-6xl font-semibold text-center text-gray-800 capitalize dark:text-black">
+          <h1 class="text-3xl md:text-6xl font-semibold text-center text-gray-800 capitalize dark:text-black">
             What our <span class="text-blue-500 ">clients</span> say
           </h1>
 
