@@ -206,7 +206,7 @@ export default function ContactForm() {
           <p class="text-black text-md font-semibold mt-2">Form submitted successfully! We'll be in touch soon.</p>
         )}
         {isFail && (
-          <p class="text-black text-md font-semibold mt-2">Form submission failed. Try again later.</p>
+          <p class="text-red-600 text-md font-semibold mt-2">Form submission failed. Try again later.</p>
         )}
       </form>
     </div>
