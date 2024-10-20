@@ -10,6 +10,7 @@ export default function ContactForm() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isFail, setIsFail] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
 
   useEffect(() => {
@@ -32,7 +33,8 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-
+    setIsFail(false);
+    setIsSuccess(false);
     try {
       const response = await fetch('http://127.0.0.1:8000/api/contact/', {
         method: 'POST',
@@ -56,7 +58,7 @@ export default function ContactForm() {
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      // Handle error (e.g., show error message to user)
+      setIsFail(true)
     } finally {
       setIsLoading(false);
     }
@@ -201,7 +203,10 @@ export default function ContactForm() {
           {isLoading ? 'Submitting...' : 'Send'}
         </button>
         {isSuccess && (
-          <p class="text-black text-md font-semibold mt-2">Form submitted successfully!</p>
+          <p class="text-black text-md font-semibold mt-2">Form submitted successfully! We'll be in touch soon.</p>
+        )}
+        {isFail && (
+          <p class="text-black text-md font-semibold mt-2">Form submission failed. Try again later.</p>
         )}
       </form>
     </div>
