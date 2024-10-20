@@ -1,6 +1,67 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    company_name: "",
+    sender_name: "",
+    position: "",
+    company_email: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    validateForm();
+  }, [formData]);
+
+  const validateForm = () => {
+    const { company_name, sender_name, position, company_email, message } = formData;
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(company_email);
+    setIsFormValid(
+      company_name && sender_name && position && isEmailValid && message
+    );
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/contact/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        setFormData({
+          company_name: "",
+          sender_name: "",
+          position: "",
+          company_email: "",
+          message: "",
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Handle error (e.g., show error message to user)
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div class="container px-6 py-12 my-24 mx-auto grid md:grid-cols-2 items-start gap-16 bg-blue-500 rounded-xl">
       <div>
@@ -89,38 +150,59 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <form class="ml-auto space-y-4">
-      <input
+      <form onSubmit={handleSubmit} class="ml-auto space-y-4">
+        <input
           type="text"
-          placeholder="Company Name"
+          name="company_name"
+          value={formData.company_name}
+          onChange={handleInputChange}
+          placeholder="Company Name *"
           class="w-full rounded-md py-3 px-4 bg-gray-100 text-black text-sm outline-blue-500"
         />
         <input
           type="text"
-          placeholder="Your Name"
+          name="sender_name"
+          value={formData.sender_name}
+          onChange={handleInputChange}
+          placeholder="Your Name *"
           class="w-full rounded-md py-3 px-4 bg-gray-100 text-black text-sm outline-blue-500"
         />
         <input
           type="text"
-          placeholder="Your Position"
+          name="position"
+          value={formData.position}
+          onChange={handleInputChange}
+          placeholder="Your Position *"
           class="w-full rounded-md py-3 px-4 bg-gray-100 text-black text-sm outline-blue-500"
         />
         <input
           type="email"
-          placeholder="Your Email"
+          name="company_email"
+          value={formData.company_email}
+          onChange={handleInputChange}
+          placeholder="Your Email *"
           class="w-full rounded-md py-3 px-4 bg-gray-100 text-black text-sm outline-blue-500"
         />
         <textarea
-          placeholder="Message"
+          name="message"
+          value={formData.message}
+          onChange={handleInputChange}
+          placeholder="Message *"
           rows="6"
           class="w-full rounded-md px-4 bg-gray-100 text-black text-sm pt-3 outline-blue-500"
         ></textarea>
         <button
-          type="button"
-          class="text-white bg-blue-700 hover:bg-blue-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"
+          type="submit"
+          disabled={!isFormValid || isLoading}
+          class={`text-white bg-blue-700 hover:bg-blue-800 tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6 ${
+            !isFormValid || isLoading ? 'opacity-50 cursor-not-allowed' : ''
+          }`}
         >
-          Send
+          {isLoading ? 'Submitting...' : 'Send'}
         </button>
+        {isSuccess && (
+          <p class="text-black text-md font-semibold mt-2">Form submitted successfully!</p>
+        )}
       </form>
     </div>
   );
