@@ -1,17 +1,41 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 
 const Industries = () => {
+  const industryRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-left');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    industryRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      industryRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
   return (
     <section className="dark:bg-earthybrown rounded-xl">
       <div className="container px-6 py-12 mx-auto my-24">
         <div>
           <h1 className="text-black text-3xl md:text-6xl pb-8 text-center">
-          Tailored AI Solutions for Every Business Need
+            Tailored AI Solutions for Every Business Need
             {/* <span className="text-blue-500">transformed</span> */}
           </h1>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div>
+          <div ref={(el) => (industryRefs.current[0] = el)}>
             <svg className="w-8 h-8" viewBox="0 0 30 30" fill="none">
               <path
                 d="M29.6931 14.2283L22.7556 6.87823C22.3292 6.426 21.6175 6.40538 21.1652 6.83212C20.7137 7.25851 20.6927 7.9706 21.1195 8.42248L27.3284 15L21.1195 21.5783C20.6927 22.0302 20.7137 22.7419 21.1652 23.1687C21.3827 23.3738 21.6606 23.4754 21.9374 23.4754C22.2363 23.4754 22.5348 23.3569 22.7557 23.1233L29.6932 15.7729C30.1022 15.339 30.1023 14.6618 29.6931 14.2283Z"
@@ -30,10 +54,16 @@ const Industries = () => {
               Information Technology
             </h1>
             <p className="mt-2  text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim
-              fusce tortor, ac sed malesuada blandit. Et mi gravida sem feugiat.
+              Drive transformation by advancing communication and improving
+              access to essential services for consumers. <br/><br/>Leverage data-driven
+              insights and AI-based algorithms to enhance decision-making and
+              propel innovation. By safeguarding against AI-powered attacks and
+              eliminating security blind spots, ensure robust protection. 
+              Reinvent your enterprise operations with Generative AI,
+              accelerating innovation and optimizing business processes for the
+              digital age.
             </p>
-            <a
+            {/* <a
               href="#"
               class="flex items-center -mx-1 my-3 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
             >
@@ -50,11 +80,11 @@ const Industries = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </a> */}
           </div>
-          <div>
+          <div ref={(el) => (industryRefs.current[1] = el)}>
             <svg
-            className="w-8 h-8" 
+              className="w-8 h-8"
               fill="#0000ff"
               height="800px"
               width="800px"
@@ -106,31 +136,20 @@ const Industries = () => {
               Chemical
             </h1>
             <p className="mt-2  text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim
-              fusce tortor, ac sed malesuada blandit. Et mi gravida sem feugiat.
+              We offer AI-driven solutions for optimizing chemical processes,
+              maximizing yield, and improving efficiency by analyzing large
+              datasets and raw materials. <br/><br/>Reduce your energy consumption,
+              minimize waste, and detect abnormalities in real-time through
+              scalable, intelligent monitoring systems. Our solutions enhance
+              safety, and streamline labor-intensive processes with smart
+              algorithms for improved operations. Boost your product quality,
+              ensuring efficient, sustainable, and cost-effective chemical
+              engineering processes.
             </p>
-            <a
-              href="#"
-              class="flex items-center -mx-1 my-3 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-            >
-              <span class="mx-1">read more</span>
-              <svg
-                class="w-4 h-4 mx-1 rtl:-scale-x-100"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
           </div>
 
           {/* Feature 3 */}
-          <div>
+          <div ref={(el) => (industryRefs.current[2] = el)}>
             <svg className="w-8 h-8" viewBox="0 0 30 30" fill="none">
               <g clip-path="url(#clip0)">
                 <path
@@ -161,30 +180,18 @@ const Industries = () => {
               </defs>
             </svg>
             <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-black">
-              Mechanical
+              Electrical
             </h1>
             <p className="mt-2  text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim
-              fusce tortor, ac sed malesuada blandit. Et mi gravida sem feugiat.
+              Use cutting-edge electrical engineering solutions to reduce
+              downtime and optimize on-site activities. <br/><br/>
+              Get specialized in
+              extending transformer life through online monitoring for oil-based
+              transformers, ensuring real-time data insights for proactive
+              maintenance. <br/>With innovative technologies, we empower energy
+              systems for greater efficiency and help accelerate the transition
+              to sustainable energy.
             </p>
-            <a
-              href="#"
-              class="flex items-center -mx-1 my-3 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-            >
-              <span class="mx-1">read more</span>
-              <svg
-                class="w-4 h-4 mx-1 rtl:-scale-x-100"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@ const ServiceCard = ({ title, description, icon }) => {
         <p className="h-52 text-gray-500 dark:text-gray-300 text-left">{description}</p>
   
         <a
-          href="#"
+          href="/services"
           className="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
         >
           <span className="mx-1">Learn more</span>
