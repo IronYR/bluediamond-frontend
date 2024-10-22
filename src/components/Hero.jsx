@@ -23,7 +23,7 @@ export default function Hero() {
 
             {/* Hero Image with hover effect */}
             <img
-              src="/hero-image.jpg"
+              src="/static/hero-image.jpg"
               className="rounded-3xl transition-transform duration-300 ease-in-out transform hover:scale-105"
               alt="Hero"
             />

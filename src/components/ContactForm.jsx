@@ -36,11 +36,13 @@ export default function ContactForm() {
     setIsFail(false);
     setIsSuccess(false);
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/contact/', {
+      const response = await fetch('/api/contact/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-CSRFToken': getCookie('csrftoken'), // Add this line
         },
+        credentials: 'include', // Add this line
         body: JSON.stringify(formData),
       });
 
@@ -63,6 +65,22 @@ export default function ContactForm() {
       setIsLoading(false);
     }
   };
+
+  // get the CSRF token
+  function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
 
   return (
     <div class="container px-6 py-12 my-24 mx-auto grid md:grid-cols-2 items-start gap-16 bg-blue-500 rounded-xl">
