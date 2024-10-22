@@ -32,18 +32,20 @@ const ServiceCard = ({ title, description, icon }) => {
         <span className="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
           {icon}
         </span>
-  
+        <div className="h-12">
         <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white">
           {title}
         </h1>
+        </div>
+        
   
-        <p className="text-gray-500 dark:text-gray-300">{description}</p>
+        <p className="h-52 text-gray-500 dark:text-gray-300 text-left">{description}</p>
   
         <a
-          href="#"
+          href="/services"
           className="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
         >
-          <span className="mx-1">read more</span>
+          <span className="mx-1">Learn more</span>
           <svg
             className="w-4 h-4 mx-1 rtl:-scale-x-100"
             fill="currentColor"

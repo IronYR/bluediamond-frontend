@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import BlogLanding from '../components/BlogLanding'
 import Industries from '../components/Industries'
 import Testimonials from '../components/Testimonials'
+import ContactForm from '../components/ContactForm'
 function Index() {
   return (
     <div>
@@ -15,7 +16,8 @@ function Index() {
       <Services/>
       <Industries/>
       <BlogLanding/>
-      <Testimonials/>
+      <ContactForm/>
+      {/* <Testimonials/> */}
       <Footer/>
       {/* <BlogLanding/>
       <Footer/> */}

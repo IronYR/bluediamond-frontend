@@ -1,8 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face{
+  font-family: "SourceSans";
+  src:local("SourceSans-Regular"),
+  url('./assets/fonts/SourceSans3-VariableFont_wght.ttf') 
+}
+@font-face {
+  font-family: "Nexa";
+  src: local("Nexa-Heavy"), 
+  url('./assets/fonts/Nexa-Heavy.ttf');
+}
 body{
   overflow-x: hidden;
+  font-family: "SourceSans";
+}
+h1, h2{
+  font-family: "Nexa";
 }
 @keyframes fadeInUp {
   from {
@@ -17,6 +31,20 @@ body{
 
 .animate-fade-in-up {
   animation: fadeInUp 0.5s ease-out forwards;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s ease-out forwards;
 }
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
