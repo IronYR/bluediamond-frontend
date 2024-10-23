@@ -136,7 +136,7 @@ export default function Services() {
   return (
     <section>
       <div className="container px-6 py-10 mx-auto my-24" id="services">
-        <h1 className="text-3xl lg:text-6xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
+        <h1 className="text-3xl lg:text-6xl font-semibold text-center text-gray-800 capitalize dark:text-white">
           Our <span className="text-blue-500">Services</span>
         </h1>
 
