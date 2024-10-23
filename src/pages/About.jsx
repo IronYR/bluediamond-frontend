@@ -10,7 +10,7 @@ function About() {
       <main className="container mx-auto px-4 py-12">
         <FadeInSection>
           <section className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-4">About Us</h1>
+            <h1 className="text-3xl lg:text-6xl font-bold mb-4">About Us</h1>
             <div className="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
           </section>
         </FadeInSection>
