@@ -1,17 +1,22 @@
-import React from 'react';
+import React from "react";
+import FadeInSection from "./FadeInSection";
 
 export default function Hero() {
   return (
-    <div style={{paddingRight: '30px', paddingLeft: '30px'}}>
+    <div style={{ paddingRight: "30px", paddingLeft: "30px" }}>
       <section className="py-32">
         <div className="container">
           <div className="grid items-center gap-8 lg:grid-cols-2">
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
-              Explainable & Reliable  AI Solution
+                Explainable & Reliable AI Solution
               </h1>
               <p className="mb-8 max-w-xl text-gray-400 lg:text-xl">
-              Our explainable and reliable AI solutions empower your business to adapt and thrive. By enhancing transparency and building trust, we ensure that your AI systems not only deliver results but also provide clear insights into their decision-making processes
+                Our explainable and reliable AI solutions empower your business
+                to adapt and thrive. By enhancing transparency and building
+                trust, we ensure that your AI systems not only deliver results
+                but also provide clear insights into their decision-making
+                processes
               </p>
               <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
                 {/* Contact Us Button with zoom effect */}
