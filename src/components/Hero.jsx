@@ -1,7 +1,10 @@
 import React from 'react';
+import FadeInSection from './FadeInSection';
 
 export default function Hero() {
   return (
+    <FadeInSection>
+
     <div style={{paddingRight: '30px', paddingLeft: '30px'}}>
       <section className="py-32">
         <div className="container">
@@ -31,5 +34,7 @@ export default function Hero() {
         </div>
       </section>
     </div>
+    </FadeInSection>
+
   );
 }
