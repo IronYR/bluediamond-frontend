@@ -19,7 +19,7 @@ function About() {
           <FadeInSection>
             <section className="bg-blue-500 rounded-lg shadow-lg p-8">
               <h2 className="text-3xl lg:text-6xl font-semibold mb-4">Our Vision</h2>
-              <p className="text-white leading-relaxed ">
+              <p className="text-white leading-relaxed lg:text-2xl">
                 To revolutionize industries through tailored AI solutions that speak the unique language of each field, fostering innovation, efficiency, and trust in every interaction.
               </p>
             </section>
