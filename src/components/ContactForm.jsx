@@ -65,7 +65,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div class="container px-6 py-12 my-24 mx-auto grid md:grid-cols-2 items-start gap-16 bg-blue-500 rounded-xl">
+    <div class="container px-6 py-12 my-12 mx-auto grid md:grid-cols-2 items-start gap-16 bg-blue-500 rounded-xl">
       <div>
         <h1 class="text-black text-4xl lg:text-6xl font-extrabold">Let's Talk</h1>
         <p class="text-md mt-4">
