@@ -44,6 +44,7 @@ const BlogCard = ({ post }) => {
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import FadeInSection from "../components/FadeInSection";
 
 const BlogPage = () => {
   const [posts, setPosts] = useState([
@@ -92,18 +93,19 @@ const BlogPage = () => {
 
   return (
     <div>
-        <Navbar/>
-      <section className="py-32 container" style={{width:"100vw"}}>
+      <Navbar />
+      <section className="py-32 container" style={{ width: "100vw" }}>
         <div className="container flex flex-col items-center gap-16 lg:px-16">
-          <div className="text-center">
-            <h2 className="mb-3 text-pretty text-3xl font-semibold md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
-              Our Featured Insights...
-            </h2>
-            <p className="mb-8 text-white md:text-base lg:max-w-2xl lg:text-lg">
-              Explore the latest articles and insights from our blog.
-            </p>
-
-          </div>
+          <FadeInSection>
+            <div className="text-center">
+              <h2 className="mb-3 text-pretty text-3xl font-semibold md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
+                Our Featured Insights...
+              </h2>
+              <p className="mb-8 text-white md:text-base lg:max-w-2xl lg:text-lg">
+                Explore the latest articles and insights from our blog.
+              </p>
+            </div>
+          </FadeInSection>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {posts.map((post) => (
@@ -112,7 +114,7 @@ const BlogPage = () => {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

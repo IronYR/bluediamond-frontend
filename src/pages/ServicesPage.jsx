@@ -22,7 +22,10 @@ function ServicesPage() {
       <Navbar />
       <FadeInSection>
         <main className="flex-grow container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
+          <section className="text-center mb-16">
+            <h1 className="text-3xl lg:text-6xl font-bold mb-4">Our Services</h1>
+            <div className="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
+          </section>
 
           <div className="space-y-12">
             <ServiceCard

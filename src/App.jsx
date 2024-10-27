@@ -7,6 +7,7 @@ import BlogPostPage from './pages/BlogPostPage';
 import IndustriesPage from './pages/IndustriesPage';
 import ServicesPage from './pages/ServicesPage';
 import Portfolio from './pages/Portfolio';
+import ContactUs from './pages/ContactUs';
 function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/industries" element={<IndustriesPage />} />
         <Route path="/services" element={<ServicesPage />} />        
         <Route path="/portfolio" element={<Portfolio />} />        
+        <Route path="/contactus" element={<ContactUs />} />        
         <Route path="/blog/:slug" element={<BlogPostPage />} /> {/* Dynamic route */}
       </Routes>
     </Router>

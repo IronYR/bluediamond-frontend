@@ -65,7 +65,7 @@ export default function BlogLanding() {
                 />
 
                 <div>
-                  <h1 className="max-w-lg mt-4 text-2xl font-semibold leading-tight text-gray-800 dark:text-white hover:text-gray-500 hover:underline">
+                  <h1 className="max-w-lg mt-4 text-2xl font-semibold leading-tight text-white hover:text-gray-500 hover:underline">
                     {blogs[0].title}
                   </h1>
                 </div>
