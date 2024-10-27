@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0E1321;
-  /* background-color: #293756; */
+  /* background-color: #0E1321; */
+  background-color: #293756;
   color: white;
 }
 a.active{

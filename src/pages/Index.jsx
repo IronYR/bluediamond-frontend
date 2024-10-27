@@ -14,7 +14,7 @@ function Index() {
       <Navbar/>
       <Hero/>
       <Services/>
-      <Industries/>
+      {/* <Industries/> */}
       <BlogLanding/>
       <ContactForm/>
       {/* <Testimonials/> */}
