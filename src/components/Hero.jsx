@@ -9,14 +9,13 @@ export default function Hero() {
           <div className="grid items-center gap-8 lg:grid-cols-2">
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
-                Explainable & Reliable AI Solution
+                What if...
               </h1>
               <p className="mb-8 max-w-xl text-gray-400 lg:text-xl">
-                Our explainable and reliable AI solutions empower your business
-                to adapt and thrive. By enhancing transparency and building
-                trust, we ensure that your AI systems not only deliver results
-                but also provide clear insights into their decision-making
-                processes
+                What if you had true free weekends? What if you could
+                spend more time with your family? We deliver tailor-made AI
+                solutions that handle repetitive tasks, helping you build a
+                future-ready company while increasing profitability.
               </p>
               <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
                 {/* Contact Us Button with zoom effect */}

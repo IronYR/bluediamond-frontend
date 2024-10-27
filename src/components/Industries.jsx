@@ -26,11 +26,11 @@ const Industries = () => {
     };
   }, []);
   return (
-    <section className="dark:bg-earthybrown rounded-xl">
+    <section className="bg-earthybrown rounded-xl">
       <div className="container px-6 py-12 mx-auto my-24">
         <div>
           <h1 className="text-black text-3xl md:text-6xl pb-8 text-center">
-            Tailored AI Solutions for Every Business Need
+            More profit, more time and a future fit company
             {/* <span className="text-blue-500">transformed</span> */}
           </h1>
         </div>
@@ -50,7 +50,7 @@ const Industries = () => {
                 fill="#4299E1"
               />
             </svg>
-            <h1 className="mt-4 text-xl font-semibold dark:text-black">
+            <h1 className="mt-4 text-xl font-semibold text-black">
               Information Technology
             </h1>
             <p className="mt-2  text-white">
@@ -132,7 +132,7 @@ const Industries = () => {
                 </g>
               </g>
             </svg>
-            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-black">
+            <h1 className="mt-4 text-xl font-semibold text-black">
               Chemical
             </h1>
             <p className="mt-2  text-white">
@@ -179,7 +179,7 @@ const Industries = () => {
                 </clipPath>
               </defs>
             </svg>
-            <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-black">
+            <h1 className="mt-4 text-xl font-semibold text-black">
               Electrical
             </h1>
             <p className="mt-2  text-white">

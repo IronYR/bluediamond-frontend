@@ -28,18 +28,18 @@ const ServiceCard = ({ title, description, icon }) => {
     }, []);
   
     return (
-      <div ref={cardRef} className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800 opacity-0 translate-y-4">
-        <span className="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
+      <div ref={cardRef} className="flex flex-col items-center p-6 space-y-3 text-center rounded-xl bg-gray-800 opacity-0 translate-y-4">
+        <span className="inline-block p-3 rounded-full dark:text-white bg-blue-500">
           {icon}
         </span>
         <div className="h-12">
-        <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white">
+        <h1 className="text-xl font-semibold capitalize dark:text-white">
           {title}
         </h1>
         </div>
         
   
-        <p className="h-52 text-gray-500 dark:text-gray-300 text-left">{description}</p>
+        <p className="h-52 dark:text-gray-300 text-left">{description}</p>
   
         <a
           href="/services"
