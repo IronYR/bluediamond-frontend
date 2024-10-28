@@ -10,17 +10,15 @@ import Testimonials from '../components/Testimonials'
 import ContactForm from '../components/ContactForm'
 function Index() {
   return (
-    <div>
-      <Navbar/>
-      <Hero/>
+    <div className='w-full flex justify-center items-center flex-col'>
+      <div className='w-full flex justify-center items-center flex-col'>
+        <Navbar/>
+        <Hero/>
+      </div>
+      
       <Services/>
-      {/* <Industries/> */}
       <BlogLanding/>
-      <ContactForm/>
-      {/* <Testimonials/> */}
       <Footer/>
-      {/* <BlogLanding/>
-      <Footer/> */}
     </div>
   )
 }

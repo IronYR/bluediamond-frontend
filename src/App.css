@@ -3,7 +3,9 @@
   justify-content: center;
   align-items: center;
   /* background-color: #0E1321; */
+
   background-color: #293756;
+  /* background-color: #26A9E0; */
   color: white;
 }
 a.active{
@@ -12,6 +14,12 @@ a.active{
 }
 html, body {
   overflow-x: hidden;
+}
+#root{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
