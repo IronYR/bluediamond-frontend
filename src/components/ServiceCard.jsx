@@ -32,7 +32,7 @@ const ServiceCard = ({ title, description, icon }) => {
         <span className="inline-block p-3 rounded-full dark:text-white bg-blue-500">
           {icon}
         </span>
-        <div className="h-12">
+        <div className="h-24">
         <h1 className="text-xl font-semibold capitalize dark:text-white">
           {title}
         </h1>

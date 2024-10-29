@@ -25,7 +25,7 @@ const services = [
     ),
   },
   {
-    title: "Revolutionize Hiring with Our Intelligent HR Chatbot",
+    title: "Focus on Your Vision, We’ll Take Care of Hiring While You Drive Growth.",
     description:
       "Our HR chatbot transforms hiring with text and voice interviews. It engages candidates and analyzes them for non-verbal cues. With transparent AI evaluations, it ensures fair, data-driven decisions, enhancing the recruitment experience and empowering HR teams to make informed choices efficiently",
     icon: (
@@ -46,7 +46,7 @@ const services = [
     ),
   },
   {
-    title: "Trust us for your foundational data needs",
+    title: "Data Crafted for Leaders: Unlock Insights, Drive Success.",
     description:
       "Our dataset creation service provides high-quality, tailored datasets using advanced techniques for accuracy and reliability. We collaborate with your team to deliver actionable datasets that drive insights and innovation.",
     icon: (

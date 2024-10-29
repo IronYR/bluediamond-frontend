@@ -18,7 +18,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const navItems = [["Our Vision", "about"],["Services", "services"], ["Blogs", "blog"], ["Contact Us","contactus"]]
   return (
-    <section>
+    <section className="w-full flex justify-center items-center">
       <div className="container">
         <div className="flex flex-col p-5 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-row items-center justify-between lg:justify-start">
@@ -54,7 +54,7 @@ const Navbar = () => {
               open ? "flex" : "hidden"
             } grow flex-col lg:flex lg:flex-row lg:justify-end`}
           >
-            <ul className="list-none space-y-2 lg:inline-flex lg:items-center lg:space-y-0">
+            <ul className="list-none gap-4 lg:inline-flex lg:items-center lg:space-y-0">
               {navItems.map(([text, link]) => (
                 <NavItem key={link} text={text} link={link} />
               ))}
