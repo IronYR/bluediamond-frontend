@@ -19,7 +19,6 @@ export default function Hero() {
 
             </h1>
             <p className="mb-8 max-w-xl text-black lg:text-xl">
-              {/* <TypewriterEffect texts={texts} /> */}
               We deliver tailor-made AI solutions that handle repetitive tasks, saving you time and helping you build a future-ready company while increasing profitability.
             </p>
             <div className="flex flex-col justify-center gap-2 sm:flex-row lg:justify-start">
