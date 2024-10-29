@@ -4,9 +4,9 @@ import FadeInSection from "./FadeInSection";
 import TypewriterEffect from "./TypewriterEffect";
 export default function Hero() {
   const texts = [
-    "What if you had true free weekends?",
-    "What if you could spend more time with your family?",
-    "We deliver tailor-made AI solutions that handle repetitive tasks, saving you time and helping you build a future-ready company while increasing profitability.",
+    "you had true free weekends?",
+    "you could spend more time with your family?",
+    // "We deliver tailor-made AI solutions that handle repetitive tasks, saving you time and helping you build a future-ready company while increasing profitability.",
   ];
   return (
     <div className="flex flex-col md:flex-row w-full bg-gradient-to-b from-primaryBlue from-0% sm:from-10%  via-secondaryBlue to-main">
@@ -14,10 +14,13 @@ export default function Hero() {
         <FadeInSection>
           <div className="text-center md:text-left space-y-4">
             <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl text-black">
-              What if...
+              What if...{" "}
+              <TypewriterEffect texts={texts} />
+
             </h1>
             <p className="mb-8 max-w-xl text-black lg:text-xl">
-              <TypewriterEffect texts={texts} />
+              {/* <TypewriterEffect texts={texts} /> */}
+              We deliver tailor-made AI solutions that handle repetitive tasks, saving you time and helping you build a future-ready company while increasing profitability.
             </p>
             <div className="flex flex-col justify-center gap-2 sm:flex-row lg:justify-start">
               <Link

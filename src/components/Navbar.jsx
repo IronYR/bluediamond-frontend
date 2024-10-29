@@ -54,7 +54,7 @@ const Navbar = () => {
               open ? "flex" : "hidden"
             } grow flex-col lg:flex lg:flex-row lg:justify-end`}
           >
-            <ul className="list-none space-y-2 lg:inline-flex lg:items-center lg:space-y-0">
+            <ul className="list-none gap-4 lg:inline-flex lg:items-center lg:space-y-0">
               {navItems.map(([text, link]) => (
                 <NavItem key={link} text={text} link={link} />
               ))}

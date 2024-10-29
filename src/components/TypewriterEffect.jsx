@@ -10,12 +10,12 @@ const TypewriterEffect = ({ texts }) => {
     const currentText = texts[currentTextIndex];
     let timeout;
 
-    if (isInitialRender) {
-      timeout = setTimeout(() => {
-        setIsInitialRender(false);
-      }, 500);
-      return () => clearTimeout(timeout);
-    }
+    // if (isInitialRender) {
+    //   timeout = setTimeout(() => {
+    //     setIsInitialRender(false);
+    //   }, 500);
+    //   return () => clearTimeout(timeout);
+    // }
 
     if (isDeleting) {
       timeout = setTimeout(() => {
@@ -39,7 +39,7 @@ const TypewriterEffect = ({ texts }) => {
 
   return (
     <div>
-      <span>{displayedText}</span>
+      <span className="font-semibold">{displayedText}</span>
       <span className="animate-blink">|</span>
     </div>
   );
