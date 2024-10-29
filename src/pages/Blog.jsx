@@ -51,21 +51,21 @@ const BlogPage = () => {
     {
       id: 1,
       title: "Test",
-      image: "/hero-image.jpg",
+      image: "/static/hero-image.jpg",
       description: "Hello",
       category: "Test",
     },
     {
       id: 2,
       title: "Next test",
-      image: "/hero-image.jpg",
+      image: "/static/hero-image.jpg",
       description: "Hello",
       category: "Test",
     },
     {
       id: 3,
       title: "Next test",
-      image: "/hero-image.jpg",
+      image: "/static/hero-image.jpg",
       description: "Hello",
       category: "Test",
     },
@@ -74,7 +74,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     // Fetch blogs from the server
-    fetch("http://127.0.0.1:8000/api/blogposts/")
+    fetch("/api/blogposts/")
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);

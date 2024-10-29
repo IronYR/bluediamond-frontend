@@ -16,7 +16,6 @@ export default function Hero() {
             <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl text-black">
               What if...{" "}
               <TypewriterEffect texts={texts} />
-
             </h1>
             <p className="mb-8 max-w-xl text-black lg:text-xl">
               We deliver tailor-made AI solutions that handle repetitive tasks, saving you time and helping you build a future-ready company while increasing profitability.
@@ -30,6 +29,12 @@ export default function Hero() {
                 Contact us
               </Link>
             </div>
+{/* Hero Image with hover effect */}
+            <img
+              src="/static/hero-image.jpg"
+              className="rounded-3xl transition-transform duration-300 ease-in-out transform hover:scale-105"
+              alt="Hero"
+            />
           </div>
         </FadeInSection>
       </div>
