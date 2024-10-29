@@ -37,7 +37,7 @@ export default function Hero() {
       {/* Image Section */}
       <div className="md:w-3/5 w-full bg-cover bg-center">
         <img
-          src="/family.jpg"
+          src="/static/family.jpg"
           className="w-full h-full max-h-[550px] object-cover"
           alt="Hero"
         />
