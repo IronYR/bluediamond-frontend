@@ -15,9 +15,18 @@ function Index() {
         <Navbar/>
         <Hero/>
       </div>
-      
       <Services/>
       <BlogLanding/>
+      <div className="w-full flex justify-center items-center">
+        <video 
+          className="w-full max-w-3xl"
+          src="/cta-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      </div>
       <Footer/>
     </div>
   )
